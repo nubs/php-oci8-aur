@@ -4,6 +4,7 @@ An [AUR] package build for PHP's [OCI8] extension.
 ## Building
 You can of course build this package using [makepkg], but the recommended way
 of building this package is using [Docker].  This can be done like so:
+
 ```bash
 docker build --tag php-oci8-aur .
 docker run --rm --volume "$(pwd):/package" php-oci8-aur
