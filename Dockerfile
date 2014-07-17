@@ -6,5 +6,3 @@ RUN sudo bash -c 'echo -e "[oracle]\nSigLevel = Optional TrustAll\nServer = http
 
 RUN sudo pacman --sync --refresh --noconfirm --noprogressbar --quiet
 RUN sudo pacman --sync --noconfirm --noprogressbar --quiet php oracle-instantclient-sdk
-
-ENV ORACLE_HOME /usr
