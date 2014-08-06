@@ -19,6 +19,11 @@ build() {
   phpize
   ./configure --prefix=/usr --with-oci8=instantclient,/usr/lib
   make
+}
+
+package() {
+  cd "${_extname}-${pkgver}"
+
   make INSTALL_ROOT="${pkgdir}" install
   echo "extension=${_extname}.so" > "${_extname}.ini"
   install -D -m644 "${_extname}.ini" "${pkgdir}/etc/php/conf.d/${_extname}.ini"
