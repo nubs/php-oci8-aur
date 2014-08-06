@@ -14,7 +14,7 @@ source=("http://pecl.php.net/get/${_extname}-${pkgver}.tgz")
 md5sums=('9de75c4649bb047c6192f13092f9751d')
 
 build() {
-  cd "${srcdir}/${_extname}-${pkgver}"
+  cd "${_extname}-${pkgver}"
 
   phpize || return 1
   ./configure --prefix=/usr --with-oci8=instantclient,/usr/lib
